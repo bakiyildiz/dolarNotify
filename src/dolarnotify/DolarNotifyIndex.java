@@ -8,8 +8,6 @@ package dolarnotify;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
-import java.text.NumberFormat;
-import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Timer;
@@ -19,7 +17,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.apache.commons.net.ftp.FTPClient;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -162,7 +159,7 @@ public class DolarNotifyIndex extends javax.swing.JFrame {
         String strXmlDate = null;
 		
         try {
-            File inputFile = new File("config.xml");
+            File inputFile = new File("../config/config.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             org.w3c.dom.Document doc = dBuilder.parse(inputFile);
